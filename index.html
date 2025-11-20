@@ -1,0 +1,58 @@
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>SportShop — Спортивные товары</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+</head>
+<body>
+  <header>
+    <h1>SportShop</h1>
+    <button id="openCartBtn">Корзина (<span id="cartCount">0</span>)</button>
+  </header>
+
+  <main>
+    <section class="products" id="products">
+      <!-- Товары будут добавлены через JS -->
+    </section>
+
+    <button id="checkoutBtn" class="checkout-btn">Оформить заказ</button>
+  </main>
+
+  <!-- Модальное окно корзины -->
+  <div id="cartModal" class="modal hidden">
+    <div class="modal-content">
+      <h2>Ваша корзина</h2>
+      <div id="cartItems"></div>
+      <p class="total">Итого: <span id="totalPrice">0</span> ₽</p>
+      <button id="closeCartBtn">Закрыть</button>
+    </div>
+  </div>
+
+  <!-- Модальное окно оформления заказа -->
+  <div id="orderModal" class="modal hidden">
+    <div class="modal-content">
+      <h2>Оформить заказ</h2>
+      <form id="orderForm">
+        <input type="text" id="firstName" placeholder="Имя" required />
+        <input type="text" id="lastName" placeholder="Фамилия" required />
+        <input type="text" id="address" placeholder="Адрес доставки" required />
+        <input type="tel" id="phone" placeholder="Номер телефона" required />
+        <button type="submit">Создать заказ</button>
+      </form>
+      <button id="closeOrderBtn">Отмена</button>
+    </div>
+  </div>
+
+  <!-- Сообщение об успешном заказе -->
+  <div id="successMessage" class="modal hidden">
+    <div class="modal-content">
+      <p>Заказ создан!</p>
+      <button id="closeSuccessBtn">OK</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
