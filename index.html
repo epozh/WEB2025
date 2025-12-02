@@ -1,0 +1,61 @@
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SportShop – Спортивные товары</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+</head>
+<body>
+  <header>
+    <h1>SportShop</h1>
+    <button id="openCartBtn" class="cart-btn"> Корзина (<span id="cartCount">0</span>)</button>
+  </header>
+
+  <main>
+    <section class="catalog" id="catalog">
+      <!-- Товары будут генерироваться из JS -->
+    </section>
+
+    <section id="cartModal" class="cart-modal hidden">
+      <div class="cart-content">
+        <h2>Ваша корзина</h2>
+        <div id="cartItems"></div>
+        <p class="total">Итого: <span id="totalPrice">0</span> ₽</p>
+        <button id="checkoutBtn">Оформить заказ</button>
+        <button id="closeCartBtn">Закрыть</button>
+      </div>
+    </section>
+
+    <section id="orderForm" class="order-form hidden">
+      <div class="form-content">
+        <h2>Оформление заказа</h2>
+        <form id="orderFormEl">
+          <label>
+            Имя:
+            <input type="text" name="firstName" required />
+          </label>
+          <label>
+            Фамилия:
+            <input type="text" name="lastName" required />
+          </label>
+          <label>
+            Адрес доставки:
+            <input type="text" name="address" required />
+          </label>
+          <label>
+            Телефон:
+            <input type="tel" name="phone" required />
+          </label>
+          <button type="submit">Создать заказ</button>
+          <button type="button" id="cancelOrderBtn">Отмена</button>
+        </form>
+      </div>
+    </section>
+
+    <div id="message" class="message hidden">Заказ создан!</div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
