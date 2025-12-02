@@ -1,0 +1,75 @@
+* {
+    cursor: pointer;
+  }
+  
+  .hidden {
+    display: none;
+  }
+  
+  /* Form */
+  .order-form label {
+    display: block;
+    margin: 1rem 0 0.5rem;
+  }
+  
+  .order-form input {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .order-form button {
+    margin-top: 1rem;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 4px;
+  }
+  
+  #orderFormEl button[type="submit"] {
+    background: #2ecc71;
+    color: white;
+  }
+  
+  #cancelOrderBtn {
+    background: #95a5a6;
+    color: white;
+    margin-left: 0.5rem;
+  }
+  
+  /* Message */
+  .message {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #2ecc71;
+    color: white;
+    padding: 1rem;
+    border-radius: 4px;
+    z-index: 2000;
+  }
+  
+  /* Адаптив */
+  @media (max-width: 768px) {
+    .catalog {
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      padding: 1rem;
+    }
+  
+    header {
+      padding: 1rem;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .catalog {
+      grid-template-columns: 1fr;
+    }
+  
+    .cart-content, .form-content {
+      width: 95%;
+      padding: 1.5rem;
+    }
+  }
